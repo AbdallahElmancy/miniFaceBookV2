@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
-
-const runConnection= ()=>{
- return mongoose.connect(process.env.CONEECTION_STRING).then((res)=>{
-    console.log("run");
- }).catch((error)=>{
-    console.log("there is error");
- })
+const url = process.env.CONEECTION_STRING
+let connection = ()=>{
+    mongoose.connect(url).then((res)=>{
+        console.log("run");
+     }).catch((error)=>{
+        console.log("there is error");
+     })
 }
 
 
-module.exports = runConnection
+module.exports = connection

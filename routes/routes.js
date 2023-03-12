@@ -1,6 +1,4 @@
-const userRoute = require('../module/user/user.routes');
-const massageRoute = require('../module/massage/massage.routes');
-
-
-
-module.exports = {userRoute,massageRoute}
+const userRouter = require("../module/user/user.routes")
+const postRouter = require("../module/post/post.routes")
+const commentRouter = require("../module/comment/comment.routes")
+module.exports = {userRouter,postRouter,commentRouter}
